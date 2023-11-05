@@ -1,0 +1,46 @@
+{
+    "IRIT_RTF": {
+        "Floor_1": {
+            "Room_101": {
+                "coords": [100, 200],
+                "connections": ["Room_102"]
+            },
+            "Room_102": {
+                "coords": [150, 200],
+                "connections": ["Room_101", "Room_103"]
+            },
+            "Room_103": {
+                "coords": [200, 200],
+                "connections": ["Room_102"]
+            }
+        },
+        "Floor_2": {
+            "Room_201": {
+                "coords": [100, 250],
+                "connections": ["Room_202"]
+            },
+            "Room_202": {
+                "coords": [150, 250],
+                "connections": ["Room_201", "Room_203"]
+            },
+            "Room_203": {
+                "coords": [200, 250],
+                "connections": ["Room_202"]
+            }
+        }
+    },
+    "another_building": {
+        "Floor_1": {
+            "Room_": {
+                "coords": [100, 200],
+                "connections": ["Room_"]
+            },
+            "Room_": {
+                "coords": [100, 200],
+                "connections": ["Room_", "Room_"]
+            },
+
+            }
+        }
+    }
+}

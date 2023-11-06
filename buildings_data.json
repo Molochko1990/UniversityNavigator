@@ -17,13 +17,13 @@
                 "coords": [620, 190],
                 "connections": ["C_2"]
             },
-            "Stairs_1_1": {
+            "Stairs_0_1": {
                 "coords": [600, 1840],
                 "connections": ["Room_01", "Stairs_2_1"]
             }
         },
         "Floor_1": {
-            "Stairs_2_1": {
+            "Stairs_1_1": {
                 "coords": [600, 1840],
                 "connections": ["Room_201", "Stairs_1_2"]
             },

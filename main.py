@@ -1,9 +1,3 @@
-import json
-import networkx as nx
-from PIL import Image, ImageDraw
-
-with open('path_to_your_file.json', 'r') as f:
-    data = json.load(f)
 
 G = nx.Graph()
 

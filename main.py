@@ -2,38 +2,63 @@ import json
 import networkx as nx
 from PIL import Image, ImageDraw
 
-with open('path_to_your_file.json', 'r') as f:
+with open('buildings_data.json', 'r') as f:
     data = json.load(f)
+
+floor_maps = {
+    "Floor_0": "0 FLOOR.png",
+    "Floor_1": "1 FLOOR.png",
+
+}
 
 G = nx.Graph()
 
-# все ключевые точки
-key_points = ["P-113", "P-114", "P-115", "P-1-1"]  # в формате P-113 будут написаны кабинеты, в формате P_1_1 точки в коридорах
-for key_point in key_points:
-    G.add_node(key_point)
-# связь между всеми точками
-#
-connections = [("P-113", "P-1-1"), ("P-1-1", "P-1-2"), ("P-1-2", "P-115"), ("P-1-2", "P-114")]
-for connection in connections:
-    G.add_edge(connection[0], connection[1], weight=1)
-#Поиск пути
-start_room = "P-114"
-end_room = "P-115"
-shortest_path = nx.shortest_path(G, source=start_room, target=end_room, weight="weight")
-# визуализация пути на карте
-img = Image.open("0 FLOOR.png")
-draw = ImageDraw.Draw(img)
-# Координаты каждого кабинета, коридора, лестницы и тд
-coordinates_rtf_1 = {
-    "P-113": (210, 160),
-    "P-114": (150, 150),
-    "P-115": (250, 250),
-    "P-1-1": (230, 160),
-    "P-1-2": (230, 180)
-}
-# рисуем линию
-for i in range(len(shortest_path) - 1):
-    draw.line([coordinates_rtf_1[shortest_path[i]], coordinates_rtf_1[shortest_path[i+1]]], fill="red", width=5)
+def add_rooms_and_connections(building, floor):
+    for room, attributes in building[floor].items():
+        coords = tuple(attributes['coords'])
+        G.add_node(room, coords=coords, floor=floor)
+        for conn in attributes['connections']:
+            G.add_edge(room, conn, weight=1)
 
-img.show()
-img.save("result.png")
+
+for building_name, building_data in data.items():
+    for floor in building_data:
+        add_rooms_and_connections(building_data, floor)
+
+
+start_room = "Room_01"
+end_room = "Room_02"
+shortest_path = nx.shortest_path(G, source=start_room, target=end_room)
+
+
+def draw_path_segment(draw, segment, color="red", width=5):
+    for i in range(len(segment) - 1):
+        room_start = segment[i]
+        room_end = segment[i + 1]
+        coords_start = G.nodes[room_start]['coords']
+        coords_end = G.nodes[room_end]['coords']
+        draw.line([coords_start, coords_end], fill=color, width=width)
+
+
+segments = {}
+for room in shortest_path:
+    room_data = G.nodes[room]
+    if 'floor' in room_data:
+        floor = room_data['floor']
+        if floor not in segments:
+            segments[floor] = []
+        segments[floor].append(room)
+    else:
+        print(f"Can't determine the floor for room: {room}")
+
+
+for floor, segment in segments.items():
+    map_file = floor_maps.get(floor)
+    if map_file:
+        img = Image.open(map_file)
+        draw = ImageDraw.Draw(img)
+        draw_path_segment(draw, segment)
+        img.save(f"result_{floor}.png")
+        img.show()
+    else:
+        print(f"No map for floor: {floor}")

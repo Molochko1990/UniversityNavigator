@@ -1,23 +1,35 @@
 {
     "IRIT_RTF": {
-        "Floor_1": {
-            "Room_101": {
-                "coords": [100, 200],
-                "connections": ["Room_102"]
+        "Floor_0": {
+            "Room_01": {
+                "coords": [460, 120],
+                "connections": ["C_1"]
             },
-            "Room_102": {
-                "coords": [150, 200],
-                "connections": ["Room_101", "Room_103"]
+            "C_1": {
+                "coords": [530, 120],
+                "connections": ["Room_01", "C_2"]
             },
-            "Room_103": {
-                "coords": [200, 200],
-                "connections": ["Room_102"]
+            "C_2": {
+                "coords": [530, 190],
+                "connections": ["Room_02", "C_1"]
+            },
+            "Room_02": {
+                "coords": [620, 190],
+                "connections": ["C_2"]
+            },
+            "Stairs_1_1": {
+                "coords": [600, 1840],
+                "connections": ["Room_01", "Stairs_2_1"]
             }
         },
-        "Floor_2": {
+        "Floor_1": {
+            "Stairs_2_1": {
+                "coords": [600, 1840],
+                "connections": ["Room_201", "Stairs_1_2"]
+            },
             "Room_201": {
                 "coords": [100, 250],
-                "connections": ["Room_202"]
+                "connections": ["Room_202", "Stairs_2_1"]
             },
             "Room_202": {
                 "coords": [150, 250],
@@ -38,9 +50,8 @@
             "Room_": {
                 "coords": [100, 200],
                 "connections": ["Room_", "Room_"]
-            },
+            }
 
             }
         }
     }
-}

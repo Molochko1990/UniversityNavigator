@@ -1,15 +1,12 @@
 import json
 import networkx as nx
 from PIL import Image, ImageDraw
+import floor_maps
 
 with open('buildings_data.json', 'r') as f:
     data = json.load(f)
 
-floor_maps = {
-    "Floor_0": "0 FLOOR.png",
-    "Floor_1": "1 FLOOR.png",
-
-}
+floor_maps = floor_maps.floor_maps
 
 G = nx.Graph()
 
@@ -27,7 +24,7 @@ for building_name, building_data in data.items():
 
 
 start_room = "Room_01"
-end_room = "Room_21"
+end_room = "Room_27"
 shortest_path = nx.shortest_path(G, source=start_room, target=end_room)
 
 

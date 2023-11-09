@@ -191,7 +191,7 @@
             },
             "C_33": {
                 "coords":[1620, 1739],
-                "connections":["Room_33", "C_40",,"C_35"]
+                "connections":["Room_33", "C_40","C_35"]
             },
 
             "Room_35": {

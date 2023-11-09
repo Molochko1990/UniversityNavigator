@@ -27,7 +27,7 @@ for building_name, building_data in data.items():
 
 
 start_room = "Room_01"
-end_room = "Room_08"
+end_room = "Room_21"
 shortest_path = nx.shortest_path(G, source=start_room, target=end_room)
 
 

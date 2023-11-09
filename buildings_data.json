@@ -7,7 +7,7 @@
             },
             "C_01": {
                 "coords": [539, 121],
-                "connections": ["Room_01", "C_01"]
+                "connections": ["Room_01", "C_02"]
             },
             "Room_02": {
                 "coords": [612, 186],
@@ -15,7 +15,7 @@
             },
             "C_02": {
                 "coords": [539, 186],
-                "connections": ["Room_02", "C_02"]
+                "connections": ["Room_02", "C_01", "C_03"]
             },
             "Room_03": {
                 "coords": [466, 248],
@@ -23,7 +23,7 @@
             },
             "C_03": {
                 "coords": [539, 248],
-                "connections": ["Room_03", "C_03"]
+                "connections": ["Room_03", "C_02","C_04"]
             },
             "Room_04": {
                 "coords": [612, 365],
@@ -31,7 +31,7 @@
             },
             "C_04": {
                 "coords": [539, 365],
-                "connections": ["Room_04", "C_04"]
+                "connections": ["Room_04", "C_03","C_05"]
             },
             "Room_05": {
                 "coords": [466, 365],
@@ -39,7 +39,7 @@
             },
             "C_05": {
                 "coords": [539, 365],
-                "connections": ["Room_05", "C_05"]
+                "connections": ["Room_05", "C_04", "C_06"]
             },
             "Room_06": {
                 "coords": [612, 604],
@@ -47,7 +47,7 @@
             },
             "C_06": {
                 "coords": [539, 604],
-                "connections": ["Room_06", "C_06"]
+                "connections": ["Room_06", "C_05","C_07"]
             },
             "Room_07": {
                 "coords": [466, 604],
@@ -55,7 +55,7 @@
             },
             "C_07": {
                 "coords": [539, 604],
-                "connections": ["Room_07", "C_07"]
+                "connections": ["Room_07", "C_06","C_08"]
             },
             "Room_08": {
                 "coords": [612, 786],
@@ -63,7 +63,7 @@
             },
             "C_08": {
                 "coords": [539, 786],
-                "connections": ["Room_08", "C_08"]
+                "connections": ["Room_08", "C_07","C_09"]
             },
             "Room_09": {
                 "coords": [466, 723],
@@ -71,7 +71,7 @@
             },
             "C_09": {
                 "coords": [539, 723],
-                "connections": ["Room_09", "C_09"]
+                "connections": ["Room_09", "C_08","C_10"]
             },
             "Room_10": {
                 "coords": [612, 1024],

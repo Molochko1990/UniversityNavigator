@@ -28,7 +28,7 @@ end_room = "Room_27"
 shortest_path = nx.shortest_path(G, source=start_room, target=end_room)
 
 
-def draw_path_segment(draw, segment, color="red", width=5):
+def draw_path_segment(draw, segment, color="green", width=5):
     for i in range(len(segment) - 1):
         room_start = segment[i]
         room_end = segment[i + 1]

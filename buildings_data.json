@@ -750,13 +750,13 @@
             }
         }
     },
-    "another_building": {
+    "GUK": {
         "Floor_1": {
             "Room_": {
                 "coords": [100, 200],
                 "connections": ["Room_"]
             },
-            "Room_": {
+            "Room_777": {
                 "coords": [100, 200],
                 "connections": ["Room_", "Room_"]
             }

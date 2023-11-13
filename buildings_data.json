@@ -337,8 +337,8 @@
                 "connections": ["Room_201", "Stairs_2_2","C_153"]
             },
             "C_101": {
-                "coords":[541, 1830],
-                "connections":["Room_101", "C_102"]
+                "coords":[541, 116],
+                "connections":["Room_101", "C_103"]
             },
             "Room_101": {
                 "coords":[475, 116],

@@ -352,7 +352,7 @@
                 "coords": [100, 200],
                 "connections": ["Room_"]
             },
-            "Room_": {
+            "Room_1": {
                 "coords": [100, 200],
                 "connections": ["Room_", "Room_"]
             }

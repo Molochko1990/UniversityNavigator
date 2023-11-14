@@ -38,19 +38,21 @@ def draw_path_segment(draw, segment, color="green", width=5):
 
 
 segments = {}
-for room in shortest_path:
-    room_data = G.nodes[room]
+for key_point in shortest_path:
+    room_data = G.nodes[key_point]
     if 'floor' in room_data:
         floor = room_data['floor']
         if floor not in segments:
             segments[floor] = []
-        segments[floor].append(room)
+        segments[floor].append(key_point)
     else:
-        print(f"Can't determine the floor for room: {room}")
+        print(f"Can't determine the floor for room: {key_point}")
 
 
 for floor, segment in segments.items():
-    map_file = floor_maps.get(floor)
+    map_file = floor_maps.get('IRIT_RTF', {}).get(floor)
+    # map_file = floor_maps.get(floor)
+    print(floor_maps)
     if map_file:
         img = Image.open(map_file)
         draw = ImageDraw.Draw(img)

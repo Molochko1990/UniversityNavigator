@@ -1127,7 +1127,7 @@
                 "connections":["Room_237", "C_236","C_239"]
             }
         },
-        "FLOOR_3": {
+        "Floor_3": {
             "Room_301": {
                 "coords":[386, 141],
                 "connections":["C_303"]

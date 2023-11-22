@@ -23,8 +23,8 @@ for building_name, building_data in data.items():
         add_rooms_and_connections(building_data, floor)
 
 
-start_room = "Room_201"
-end_room = "Room_250"
+start_room = "Room_101"
+end_room = "Room_239"
 shortest_path = nx.shortest_path(G, source=start_room, target=end_room)
 
 

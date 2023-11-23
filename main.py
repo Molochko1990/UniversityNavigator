@@ -23,8 +23,39 @@ for building_name, building_data in data.items():
         add_rooms_and_connections(building_data, floor)
 
 
-start_room = "Room_101"
-end_room = "Room_18"
+def convert_roomto_json_format(room):
+    rus_to_lat = {
+        'р': 'Room', 'Р': 'Room',
+        'гук': 'GUK', 'ГУК': 'GUK',
+        'и': 'I', 'И': 'I',
+        'э': 'E', 'Э': 'E',
+    }
+    parts = room.split("-")
+
+    if parts[0] in rus_to_lat:
+        parts[0] = rus_to_lat[parts[0]]
+    if parts[1][0] == '0':
+        parts[1] = parts[1][1:]
+    return "_".join(parts)
+
+
+# !!!!!!!!!!!!!! эти переменные надо связать с телеграм ботом !!!!!!!!!!!!!!!!
+# на место аргумента вот здесь     ∨∨∨∨∨∨∨∨  должен помещаться текст из тг бота, который ввел пользователь
+start_room = convert_roomto_json_format('гук-112')
+end_room = convert_roomto_json_format('ГУК-111')
+
+
+def identify_the_building(room):
+    university_buildings = {
+        'Room': 'IRIT_RTF',
+        'GUK': 'GUK',
+        'I': 'GUK'
+    }
+    parts = room.split("_")
+    if parts[0] in university_buildings:
+        university_building = university_buildings[parts[0]]
+        return university_building
+
 shortest_path = nx.shortest_path(G, source=start_room, target=end_room)
 
 
@@ -50,8 +81,7 @@ for key_point in shortest_path:
 
 
 for floor, segment in segments.items():
-    map_file = floor_maps.get('IRIT_RTF', {}).get(floor)
-    # map_file = floor_maps.get(floor)
+    map_file = floor_maps.get(identify_the_building(start_room), {}).get(floor)
     print(floor_maps)
     if map_file:
         img = Image.open(map_file)

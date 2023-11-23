@@ -41,13 +41,14 @@ def convert_roomto_json_format(room):
 
 # !!!!!!!!!!!!!! эти переменные надо связать с телеграм ботом !!!!!!!!!!!!!!!!
 # на место аргумента вот здесь     ∨∨∨∨∨∨∨∨  должен помещаться текст из тг бота, который ввел пользователь
-start_room = convert_roomto_json_format('гук-112')
-end_room = convert_roomto_json_format('ГУК-111')
+start_room = convert_roomto_json_format('Р-50')
+end_room = convert_roomto_json_format('Р-121')
 
 
 def identify_the_building(room):
     university_buildings = {
         'Room': 'IRIT_RTF',
+
         'GUK': 'GUK',
         'I': 'GUK'
     }
@@ -82,7 +83,6 @@ for key_point in shortest_path:
 
 for floor, segment in segments.items():
     map_file = floor_maps.get(identify_the_building(start_room), {}).get(floor)
-    print(floor_maps)
     if map_file:
         img = Image.open(map_file)
         draw = ImageDraw.Draw(img)

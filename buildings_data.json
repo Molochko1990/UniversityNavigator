@@ -1202,15 +1202,15 @@
             }
         }
     },
-    "another_building": {
+    "GUK": {
         "Floor_1": {
-            "Room_": {
+            "GUK_111": {
                 "coords": [100, 200],
-                "connections": ["Room_"]
+                "connections": ["GUK_112"]
             },
-            "Room_": {
-                "coords": [100, 200],
-                "connections": ["Room_", "Room_"]
+            "GUK_112": {
+                "coords": [100, 400],
+                "connections": ["GUK_111"]
             }
 
             }

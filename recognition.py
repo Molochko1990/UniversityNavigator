@@ -12,11 +12,3 @@ def extract_route(text):
         return f'{start} {end}'
     else:
         return None
-
-
-
-#route = extract_route(text)
-#if route:
-#    print(route)
-#else:
-#    print('Маршрут не найден.')

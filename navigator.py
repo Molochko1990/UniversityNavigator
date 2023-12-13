@@ -89,5 +89,7 @@ def build_path(start_room, end_room):
         else:
             print(f"No map for floor: {floor}")
     return generated_paths
-
-# build_path('р-001', 'р-127')
+try:
+    build_path('Р-123', 'р-135')
+except:
+    print('asqweqwe')

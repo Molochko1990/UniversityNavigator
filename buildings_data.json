@@ -316,11 +316,11 @@
             },
             "Stairs_0_1": {
                 "coords": [600, 1830],
-                "connections": ["C_0_1_stairs", "Stairs_1_1"]
+                "connections": ["C_0_1_stairs", "Stairs_1_1","Stairs_2_1","Stairs_3_1","Stairs_4_1","Stairs_0_1"]
             },
             "Stairs_0_2": {
                 "coords": [1467, 1830],
-                "connections": ["C_0_2_stairs", "Stairs_1_2"]
+                "connections": ["C_0_2_stairs", "Stairs_1_2","Stairs_2_2","Stairs_3_2","Stairs_4_2", "Stairs_0_2"]
             },
             "C_0_2_stairs": {
                 "coords":[1558, 1830],
@@ -330,7 +330,7 @@
         "Floor_1": {
             "Stairs_1_1": {
                 "coords": [677, 1813],
-                "connections": ["C_1_1_stairs", "Stairs_2_1","Stairs_0_1"]
+                "connections": ["C_1_1_stairs", "Stairs_1_1","Stairs_2_1","Stairs_3_1","Stairs_4_1","Stairs_0_1"]
             },
             "C_1_1_stairs": {
                 "coords":[720, 1813],
@@ -338,11 +338,11 @@
             },
             "Stairs_1_2": {
                 "coords": [1435, 1830],
-                "connections": ["C_1_2_stairs", "Stairs_2_2","Stairs_0_2"]
+                "connections": ["C_1_2_stairs", "Stairs_1_2","Stairs_2_2","Stairs_3_2","Stairs_4_2","Stairs_0_2"]
             },
             "C_1_2_stairs": {
                 "coords":[1620, 1830],
-                "connections":["Stairs_1_2", "C_135"]
+                "connections":["Stairs_1_2", "C_135" ]
             },
             "C_101": {
                 "coords":[541, 116],
@@ -352,14 +352,7 @@
                 "coords":[475, 116],
                 "connections":["C_101"]
             },
-            "C_152": {
-                "coords":[720, 1830],
-                "connections":["Stairs_1_2", "C_148"]
-            },
-            "C_153": {
-                "coords":[1379, 1830 ],
-                "connections":["Stairs_1_1", "C_149"]
-            },
+
             "Room_102": {
                 "coords":[613, 183],
                 "connections":["C_102"]
@@ -760,11 +753,11 @@
         "Floor_2": {
             "Stairs_2_1": {
                 "coords": [573, 1806],
-                "connections": ["C_2_1_stairs", "Stairs_1_1","Stairs_3_1"]
+                "connections": ["C_2_1_stairs", "Stairs_1_1","Stairs_2_1","Stairs_3_1","Stairs_4_1","Stairs_0_1"]
             },
             "Stairs_2_2": {
                 "coords": [1486, 1806],
-                "connections": ["C_2_2_stairs", "Stairs_1_2","Stairs_3_2"]
+                "connections": ["C_2_2_stairs", "Stairs_1_2","Stairs_2_2","Stairs_3_2","Stairs_4_2","Stairs_0_2"]
             },
             "C_2_1_stairs": {
                 "coords":[520, 1806],
@@ -1151,56 +1144,827 @@
                 "connections":["Room_237", "C_236","C_239"]
             }
         },
-        "FLOOR_3": {
+        "Floor_3": {
             "Room_301": {
-                "coords":[386, 141],
-                "connections":["C_303"]
+                "coords":[390, 152],
+                "connections":["C_301"]
             },
             "C_301": {
-                "coords":[470, 141],
-                "connections":["Room_301", "C_303"]
-            },
-            "Room_302": {
-                "coords":[557, 248],
-                "connections":["C_302"]
-            },
-            "C_302": {
-                "coords":[470, 248],
-                "connections":["Room_302", "C_300","C_304"]
-            },
-            "Room_3031": {
-                "coords":[381, 283],
-                "connections":["C_3031"]
-            },
-            "C_3031": {
-                "coords":[470, 283],
-                "connections":["Room_3031", "C_3029","C_3033"]
+                "coords":[472, 152],
+                "connections":["Room_301","C_303"]
             },
             "Room_303": {
-                "coords":[389, 203],
+                "coords":[406, 210],
                 "connections":["C_303"]
             },
             "C_303": {
-                "coords":[470, 203],
-                "connections":["Room_303", "C_301","C_305"]
+                "coords":[472, 210],
+                "connections":["Room_303", "C_301","C_3031"]
+            },
+            "Room_3031": {
+                "coords":[407, 274],
+                "connections":["C_3031"]
+            },
+            "C_3031": {
+                "coords":[472, 274],
+                "connections":["Room_3031", "C_303","C_302"]
+            },
+            "Room_302": {
+                "coords":[537, 323],
+                "connections":["C_302"]
+            },
+            "C_302": {
+                "coords":[472, 323],
+                "connections":["Room_302", "C_3031","C_305"]
             },
             "Room_304": {
-                "coords":[545, 443],
+                "coords":[530, 437],
                 "connections":["C_304"]
             },
             "C_304": {
-                "coords":[470, 443],
-                "connections":["Room_304", "C_302","C_306"]
+                "coords":[472, 437],
+                "connections":["Room_304", "C_305","C_306"]
             },
             "Room_305": {
-                "coords":[381, 383],
+                "coords":[409, 397],
                 "connections":["C_305"]
             },
             "C_305": {
-                "coords":[470, 383],
-                "connections":["Room_305", "C_303","C_307"]
+                "coords":[472, 397],
+                "connections":["Room_305", "C_302","C_306"]
+            },
+            "Room_306": {
+                "coords":[530, 613],
+                "connections":["C_306"]
+            },
+            "C_306": {
+                "coords":[472, 613],
+                "connections":["Room_306", "C_3091","C_304"]
+            },
+            "Room_3092": {
+                "coords":[418, 615],
+                "connections":["C_3092"]
+            },
+            "C_3092": {
+                "coords":[472, 615],
+                "connections":["Room_3092", "C_304","C_3091"]
+            },
+            "Room_3091": {
+                "coords":[409, 684],
+                "connections":["C_3091"]
+            },
+            "C_3091": {
+                "coords":[472, 684],
+                "connections":["Room_3091", "C_308","C_3092"]
+            },
+            "Room_308": {
+                "coords":[529, 733],
+                "connections":["C_308"]
+            },
+            "C_308": {
+                "coords":[472, 733],
+                "connections":["Room_308", "C_3091","C_311"]
+            },
+            "Room_311": {
+                "coords":[419, 795],
+                "connections":["C_311"]
+            },
+            "C_311": {
+                "coords":[472, 795],
+                "connections":["Room_311", "C_312","C_308"]
+            },
+            "Room_312": {
+                "coords":[526, 853],
+                "connections":["C_312"]
+            },
+            "C_312": {
+                "coords":[472, 853],
+                "connections":["Room_312", "C_311","C_313"]
+            },
+            "Room_313": {
+                "coords":[414, 904],
+                "connections":["C_313"]
+            },
+            "C_313": {
+                "coords":[472, 904],
+                "connections":["Room_313", "C_312","C_314"]
+            },
+            "Room_3141": {
+                "coords":[529, 913],
+                "connections":["C_3141"]
+            },
+            "C_3141": {
+                "coords":[472, 913],
+                "connections":["Room_3141", "C_312","C_315"]
+            },
+            "Room_314": {
+                "coords":[523, 1022],
+                "connections":["C_314"]
+            },
+            "C_314": {
+                "coords":[472, 1022],
+                "connections":["Room_314", "C_3141","C_317"]
+            },
+            "Room_315": {
+                "coords":[415, 1022],
+                "connections":["C_315"]
+            },
+            "C_315": {
+                "coords":[472, 1022],
+                "connections":["Room_315", "C_316","C_3141"]
+            },
+            "Room_317": {
+                "coords":[407, 1202],
+                "connections":["C_317"]
+            },
+            "C_317": {
+                "coords":[472, 1202],
+                "connections":["Room_317", "C_318","C_319"]
+            },
+            "Room_316": {
+                "coords":[530, 1140],
+                "connections":["C_316"]
+            },
+            "C_316": {
+                "coords":[472, 1140],
+                "connections":["Room_316", "C_314","C_317","C_318"]
+            },
+            "Room_318": {
+                "coords":[526, 1140],
+                "connections":["C_318"]
+            },
+            "C_318": {
+                "coords":[472, 1140],
+                "connections":["Room_318", "C_316","C_317","C_314"]
+            },
+            "Room_319": {
+                "coords":[413, 1251],
+                "connections":["C_319"]
+            },
+            "C_319": {
+                "coords":[472, 1251],
+                "connections":["Room_319", "C_317","C_320"]
+            },
+            "Room_320": {
+                "coords":[538, 1316],
+                "connections":["C_320"]
+            },
+            "C_320": {
+                "coords":[472, 1316],
+                "connections":["Room_320", "C_317","C_322"]
+            },
+            "Room_321": {
+                "coords":[415, 1316],
+                "connections":["C_321"]
+            },
+            "C_321": {
+                "coords":[472, 1316],
+                "connections":["Room_321", "C_319","C_322"]
+            },
+            "Room_322": {
+                "coords":[518, 1372],
+                "connections":["C_322"]
+            },
+            "C_322": {
+                "coords":[472, 1372],
+                "connections":["Room_322", "C_320","C_325"]
+            },
+            "Room_323": {
+                "coords":[419, 1374],
+                "connections":["C_323"]
+            },
+            "C_323": {
+                "coords":[472, 1374],
+                "connections":["Room_323", "C_321","C_325"]
+            },
+            "Room_325": {
+                "coords":[330, 1612],
+                "connections":["C_325"]
+            },
+            "C_325": {
+                "coords":[472, 1612],
+                "connections":["Room_325", "C_323","C_322", "C_370"]
+            },
+            "C_370": {
+                "coords":[472, 1728],
+                "connections":["C_325","C_327","C_371"]
+            },
+            "C_371": {
+                "coords":[472, 1728],
+                "connections":["Stairs_3_1","C_370"]
+            },
+            "Stairs_3_1": {
+                "coords":[472, 1728],
+                "connections":["C_371","Stairs_2_1","Stairs_1_1","Stairs_0_1","Stairs_4_1"]
+            },
+            "Room_327": {
+                "coords":[645, 1770],
+                "connections":["C_327"]
+            },
+            "C_327": {
+                "coords":[645, 1724],
+                "connections":["Room_327", "C_370","C_329"]
+            },
+            "Room_329": {
+                "coords":[706, 1774],
+                "connections":["C_329"]
+            },
+            "C_329": {
+                "coords":[706, 1724],
+                "connections":["Room_329", "C_327","C_324"]
+            },
+            "Room_324": {
+                "coords":[762, 1659],
+                "connections":["C_324"]
+            },
+            "C_324": {
+                "coords":[762, 1724],
+                "connections":["Room_324", "C_327","C_326"]
+            },
+            "Room_326": {
+                "coords":[878, 1663],
+                "connections":["C_326"]
+            },
+            "C_326": {
+                "coords":[878, 1724],
+                "connections":["Room_326", "C_324","C_331"]
+            },
+            "Room_331": {
+                "coords":[934, 1781],
+                "connections":["C_331"]
+            },
+            "C_331": {
+                "coords":[934, 1724],
+                "connections":["Room_331", "C_326","C_333"]
+            },
+            "Room_328": {
+                "coords":[936, 1668],
+                "connections":["C_328"]
+            },
+            "C_328": {
+                "coords":[936, 1724],
+                "connections":["Room_328", "C_326","C_333"]
+            },
+            "Room_330": {
+                "coords":[1055, 1657],
+                "connections":["C_330"]
+            },
+            "C_330": {
+                "coords":[1055, 1724],
+                "connections":["Room_330", "C_333","C_332"]
+            },
+            "Room_333": {
+                "coords":[999, 1776],
+                "connections":["C_333"]
+            },
+            "C_333": {
+                "coords":[999, 1724],
+                "connections":["Room_333", "C_328","C_335"]
+            },
+            "Room_335": {
+                "coords":[1055, 1776],
+                "connections":["C_335"]
+            },
+            "C_335": {
+                "coords":[1055, 1724],
+                "connections":["Room_335", "C_333","C_332"]
+            },
+            "Room_332": {
+                "coords":[1290, 1661],
+                "connections":["C_332"]
+            },
+            "C_332": {
+                "coords":[1290, 1724],
+                "connections":["Room_332", "C_374","C_335"]
+            },
+            "Room_337": {
+                "coords":[1290, 1774],
+                "connections":["C_337"]
+            },
+            "C_337": {
+                "coords":[1290, 1724],
+                "connections":["Room_337", "C_335","C_374"]
+            },
+            "C_374": {
+                "coords":[1530, 1724],
+                "connections":[ "C_332","C_337","C_375","C_339"]
+            },
+            "C_375": {
+                "coords":[1530, 1819],
+                "connections":["Stairs_3_2", "C_374"]
+            },
+            "Stairs_3_2": {
+                "coords":[1416, 1819],
+                "connections":["C_375","Stairs_2_2","Stairs_1_2","Stairs_0_2","Stairs_4_2"]
+            },
+            "Room_344": {
+                "coords":[1472, 855],
+                "connections":["C_344"]
+            },
+            "C_344": {
+                "coords":[1530, 855 ],
+                "connections":["Room_344", "C_3421"]
+            },
+            "Room_3421": {
+                "coords":[1475, 917],
+                "connections":["C_3421"]
+            },
+            "C_3421": {
+                "coords":[1530, 917 ],
+                "connections":["Room_3421", "C_345","C_344"]
+            },
+            "Room_345": {
+                "coords":[1579, 966],
+                "connections":["C_345"]
+            },
+            "C_345": {
+                "coords":[1530, 966 ],
+                "connections":["Room_345", "C_3421","C_343"]
+            },
+            "Room_342": {
+                "coords":[1480, 1140],
+                "connections":["C_342"]
+            },
+            "C_342": {
+                "coords":[1530, 1140 ],
+                "connections":["Room_342", "C_345","C_3401"]
+            },
+            "Room_343": {
+                "coords":[1585, 1136],
+                "connections":["C_343"]
+            },
+            "C_343": {
+                "coords":[1530, 1136 ],
+                "connections":["Room_343", "C_345","C_3401"]
+            },
+            "Room_3401": {
+                "coords":[1477, 1200],
+                "connections":["C_3401"]
+            },
+            "C_3401": {
+                "coords":[1530, 1200 ],
+                "connections":["Room_3401", "C_340","C_343"]
+            },
+            "Room_340": {
+                "coords":[1483, 1262],
+                "connections":["C_340"]
+            },
+            "C_340": {
+                "coords":[1530, 1262 ],
+                "connections":["Room_340", "C_340","C_338"]
+            },
+            "Room_338": {
+                "coords":[1479, 1318],
+                "connections":["C_338"]
+            },
+            "C_338": {
+                "coords":[1530, 1318 ],
+                "connections":["Room_338", "C_336","C_340"]
+            },
+            "Room_341": {
+                "coords":[1585, 1429],
+                "connections":["C_341"]
+            },
+            "C_341": {
+                "coords":[1530, 1429 ],
+                "connections":["Room_341", "C_336","C_334"]
+            },
+            "Room_336": {
+                "coords":[1473, 1371],
+                "connections":["C_336"]
+            },
+            "C_336": {
+                "coords":[1530, 1371 ],
+                "connections":["Room_336", "C_341","C_338"]
+            },
+            "Room_334": {
+                "coords":[1481, 1496],
+                "connections":["C_334"]
+            },
+            "C_334": {
+                "coords":[1530, 1496 ],
+                "connections":["Room_334", "C_339","C_336"]
+            },
+            "Room_3411": {
+                "coords":[1568, 1490],
+                "connections":["C_3411"]
+            },
+            "C_3411": {
+                "coords":[1530, 1490 ],
+                "connections":["Room_3411", "C_341","C_339"]
+            },
+            "Room_339": {
+                "coords":[1589, 1605],
+                "connections":["C_339"]
+            },
+            "C_339": {
+                "coords":[1530, 1605 ],
+                "connections":["Room_339", "C_334","C_3411","C_374"]
             }
-        }
+        },
+        "Floor_4": {
+            "Room_401": {
+                "coords":[473, 152],
+                "connections":["C_401"]
+            },
+            "C_401": {
+                "coords":[530, 152 ],
+                "connections":["Room_401","C_4021"]
+            },
+            "Room_4021": {
+                "coords":[585, 266],
+                "connections":["C_4021"]
+            },
+            "C_4021": {
+                "coords":[530, 266 ],
+                "connections":["Room_4021", "C_401","C_402"]
+            },
+            "Room_402": {
+                "coords":[595, 377],
+                "connections":["C_402"]
+            },
+            "C_402": {
+                "coords":[530, 377 ],
+                "connections":["Room_402", "C_4021","C_404"]
+            },
+            "Room_403": {
+                "coords":[467, 386],
+                "connections":["C_403"]
+            },
+            "C_403": {
+                "coords":[530, 386 ],
+                "connections":["Room_403", "C_4021","C_404"]
+            },
+            "Room_404": {
+                "coords":[579, 444],
+                "connections":["C_404"]
+            },
+            "C_404": {
+                "coords":[530, 444 ],
+                "connections":["Room_404", "C_403","C_405"]
+            },
+            "Room_405": {
+                "coords":[473, 619],
+                "connections":["C_405"]
+            },
+            "C_405": {
+                "coords":[530, 619 ],
+                "connections":["Room_405", "C_404","C_407"]
+            },
+            "Room_406": {
+                "coords":[589, 728],
+                "connections":["C_406"]
+            },
+            "C_406": {
+                "coords":[530, 728 ],
+                "connections":["Room_406", "C_407","C_411"]
+            },
+            "Room_407": {
+                "coords":[470, 677],
+                "connections":["C_407"]
+            },
+            "C_407": {
+                "coords":[530, 677 ],
+                "connections":["Room_407", "C_406","C_405"]
+            },
+            "Room_409": {
+                "coords":[475, 735],
+                "connections":["C_409"]
+            },
+            "C_409": {
+                "coords":[530, 735 ],
+                "connections":["Room_409", "C_407","C_408"]
+            },
+            "Room_411": {
+                "coords":[470, 909],
+                "connections":["C_411"]
+            },
+            "C_411": {
+                "coords":[530, 909 ],
+                "connections":["Room_411", "C_408","C_413"]
+            },
+            "Room_408": {
+                "coords":[589, 1020],
+                "connections":["C_408"]
+            },
+            "C_408": {
+                "coords":[530, 1020 ],
+                "connections":["Room_408", "C_409","C_410"]
+            },
+            "Room_413": {
+                "coords":[473, 1029],
+                "connections":["C_413"]
+            },
+            "C_413": {
+                "coords":[530, 1029 ],
+                "connections":["Room_413", "C_410","C_411"]
+            },
+            "Room_410": {
+                "coords":[582, 1142],
+                "connections":["C_410"]
+            },
+            "C_410": {
+                "coords":[530, 1142 ],
+                "connections":["Room_410", "C_415","C_413"]
+            },
+            "Room_415": {
+                "coords":[474, 1203],
+                "connections":["C_415"]
+            },
+            "C_415": {
+                "coords":[530, 1203 ],
+                "connections":["Room_415", "C_410","C_412"]
+            },
+            "Room_417": {
+                "coords":[467, 1318],
+                "connections":["C_417"]
+            },
+            "C_417": {
+                "coords":[530, 1318 ],
+                "connections":["Room_417", "C_415","C_414"]
+            },
+            "Room_412": {
+                "coords":[577, 1316],
+                "connections":["C_412"]
+            },
+            "C_412": {
+                "coords":[530, 1316 ],
+                "connections":["Room_412", "C_415","C_419"]
+            },
+            "Room_419": {
+                "coords":[483, 1378],
+                "connections":["C_419"]
+            },
+            "C_419": {
+                "coords":[530, 1378 ],
+                "connections":["Room_419", "C_417","C_421"]
+            },
+            "Room_414": {
+                "coords":[578, 1369],
+                "connections":["C_414"]
+            },
+            "C_414": {
+                "coords":[530, 1369 ],
+                "connections":["Room_414", "C_412","C_421"]
+            },
+            "Room_421": {
+                "coords":[470, 1434],
+                "connections":["C_421"]
+            },
+            "C_421": {
+                "coords":[530, 1434 ],
+                "connections":["Room_421", "C_419","C_423"]
+            },
+            "Room_423": {
+                "coords":[482, 1696],
+                "connections":["C_423"]
+            },
+            "C_423": {
+                "coords":[530, 1696 ],
+                "connections":["Room_423", "C_421","C_471"]
+            },
+            "C_470": {
+                "coords":[530, 1814 ],
+                "connections":["C_426","Stairs_4_1", "C_471"]
+            },
+            "Stairs_4_1": {
+                "coords":[590, 1814 ],
+                "connections":["C_470", "Stairs_1_1","Stairs_2_1","Stairs_3_1","Stairs_4_1","Stairs_0_1"]
+            },
+            "C_471": {
+                "coords":[530, 1726 ],
+                "connections":["C_423","C_416","C_470"]
+            },
+
+            "Room_416": {
+                "coords":[589, 1676],
+                "connections":["C_416"]
+            },
+            "C_416": {
+                "coords":[589, 1726 ],
+                "connections":["Room_416", "C_471","C_427"]
+            },
+            "Room_427": {
+                "coords":[707, 1777],
+                "connections":["C_427"]
+            },
+            "C_427": {
+                "coords":[707, 1726 ],
+                "connections":["Room_427", "C_416","C_4181"]
+            },
+            "Room_4181": {
+                "coords":[710, 1668],
+                "connections":["C_4181"]
+            },
+            "C_4181": {
+                "coords":[710, 1726 ],
+                "connections":["Room_4181", "C_418","C_429"]
+            },
+            "Room_4271": {
+                "coords":[938, 1766],
+                "connections":["C_4271"]
+            },
+            "C_4271": {
+                "coords":[938, 1726 ],
+                "connections":["Room_4271", "C_418","C_420"]
+            },
+            "Room_418": {
+                "coords":[932, 1668],
+                "connections":["C_418"]
+            },
+            "C_418": {
+                "coords":[932, 1726 ],
+                "connections":["Room_418", "C_4181","C_416"]
+            },
+            "Room_420": {
+                "coords":[999, 1670],
+                "connections":["C_420"]
+            },
+            "C_420": {
+                "coords":[999, 1726 ],
+                "connections":["Room_420", "C_4181","C_431"]
+            },
+            "Room_429": {
+                "coords":[1002, 1772],
+                "connections":["C_429"]
+            },
+            "C_429": {
+                "coords":[1002, 1726 ],
+                "connections":["Room_429", "C_4271","C_431"]
+            },
+            "Room_431": {
+                "coords":[1055, 1770],
+                "connections":["C_431"]
+            },
+            "C_431": {
+                "coords":[1055, 1726 ],
+                "connections":["Room_431", "C_429","C_424"]
+            },
+            "Room_422": {
+                "coords":[1055, 1677],
+                "connections":["C_422"]
+            },
+            "C_422": {
+                "coords":[1055, 1726 ],
+                "connections":["Room_422", "C_429","C_424"]
+            },
+            "Room_424": {
+                "coords":[1116, 1667],
+                "connections":["C_424"]
+            },
+            "C_424": {
+                "coords":[1116, 1726 ],
+                "connections":["Room_424", "C_431","C_433"]
+            },
+            "Room_4261": {
+                "coords":[1175, 1667],
+                "connections":["C_4261"]
+            },
+            "C_4261": {
+                "coords":[1175, 1726 ],
+                "connections":["Room_4261", "C_424","C_433"]
+            },
+            "Room_433": {
+                "coords":[1346, 1777],
+                "connections":["C_433"]
+            },
+            "C_433": {
+                "coords":[1346, 1726 ],
+                "connections":["Room_433", "C_4261","C_428"]
+            },
+            "Room_426": {
+                "coords":[1347, 1672],
+                "connections":["C_426"]
+            },
+            "Room_428": {
+                "coords":[1465, 1668],
+                "connections":["C_428"]
+            },
+            "C_428": {
+                "coords":[1465, 1726 ],
+                "connections":["Room_428", "C_433","C_430"]
+            },
+            "Room_430": {
+                "coords":[1523, 1670],
+                "connections":["C_430"]
+            },
+            "C_430": {
+                "coords":[1523, 1726 ],
+                "connections":["Room_430", "C_428","C_435"]
+            },
+            "Room_435": {
+                "coords":[1581, 1779],
+                "connections":["C_435"]
+            },
+            "C_435": {
+                "coords":[1581, 1726 ],
+                "connections":["Room_435", "C_430"]
+            },
+            "C_472": {
+                "coords":[1523, 1815 ],
+                "connections":["C_430","Stairs_4_2"]
+            },
+            "Stairs_4_2": {
+                "coords":[1470, 1815 ],
+                "connections":["C_472" ,"Stairs_1_2", "Stairs_2_2", "Stairs_3_2", "Stairs_4_2", "Stairs_0_2"]
+            },
+            "Room_442": {
+                "coords":[1521, 907],
+                "connections":["C_442"]
+            },
+            "C_442": {
+                "coords":[1582, 907 ],
+                "connections":["Room_442", "C_445"]
+            },
+            "Room_445": {
+                "coords":[1637, 964],
+                "connections":["C_445"]
+            },
+            "C_445": {
+                "coords":[1582, 964 ],
+                "connections":["Room_445", "C_442","C_443"]
+            },
+            "Room_440": {
+                "coords":[1525, 967],
+                "connections":["C_440"]
+            },
+            "C_440": {
+                "coords":[1582, 967 ],
+                "connections":["Room_440", "C_443","C_442"]
+            },
+            "Room_443": {
+                "coords":[1632, 1080],
+                "connections":["C_443"]
+            },
+            "C_443": {
+                "coords":[1582, 1080 ],
+                "connections":["Room_443", "C_440","C_443"]
+            },
+            "Room_438": {
+                "coords":[1521, 1149],
+                "connections":["C_438"]
+            },
+            "C_438": {
+                "coords":[1582, 1149 ],
+                "connections":["Room_438", "C_443","C_441"]
+            },
+            "Room_441": {
+                "coords":[1635, 1312],
+                "connections":["C_441"]
+            },
+            "C_441": {
+                "coords":[1582, 1312 ],
+                "connections":["Room_441", "C_438","C_436"]
+            },
+            "Room_436": {
+                "coords":[1535, 1374],
+                "connections":["C_436"]
+            },
+            "C_436": {
+                "coords":[1582, 1374 ],
+                "connections":["Room_436", "C_441","C_437"]
+            },
+            "Room_439": {
+                "coords":[1629, 1372],
+                "connections":["C_439"]
+            },
+            "C_439": {
+                "coords":[1582, 1372 ],
+                "connections":["Room_439", "C_434","C_441"]
+            },
+            "Room_434": {
+                "coords":[1537, 1438],
+                "connections":["C_434"]
+            },
+            "C_434": {
+                "coords":[1582, 1438 ],
+                "connections":["Room_434", "C_4351","C_436"]
+            },
+            "Room_437": {
+                "coords":[1631, 1430],
+                "connections":["C_437"]
+            },
+            "C_437": {
+                "coords":[1582, 1430 ],
+                "connections":["Room_437", "C_432","C_439"]
+            },
+            "Room_432": {
+                "coords":[1539, 1494],
+                "connections":["C_432"]
+            },
+            "C_432": {
+                "coords":[1582, 1494 ],
+                "connections":["Room_432", "C_435","C_434"]
+            },
+            "Room_4351": {
+                "coords":[1633, 1496],
+                "connections":["C_4351"]
+            },
+            "C_4351": {
+                "coords":[1582, 1496 ],
+                "connections":["Room_4351", "C_435","C_437"]
+            }
+}
     },
     "GUK": {
         "Floor_1": {

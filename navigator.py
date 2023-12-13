@@ -13,16 +13,17 @@ def build_path(start_room, end_room):
 
         G = nx.Graph()
 
-        def add_rooms_and_connections(building, floor):
-            for room, attributes in building[floor].items():
+        # Creating a graph from coordinates obtained from a JSON file.
+        def add_rooms_and_connections(floors_data, floor):
+            for room, attributes in floors_data[floor].items():
                 coords = tuple(attributes['coords'])
                 G.add_node(room, coords=coords, floor=floor)
                 for conn in attributes['connections']:
                     G.add_edge(room, conn, weight=1)
 
-        for building_name, building_data in data.items():
-            for floor in building_data:
-                add_rooms_and_connections(building_data, floor)
+        for building_name, floors_data in data.items():
+            for floor in floors_data:
+                add_rooms_and_connections(floors_data, floor)
 
         def convert_roomto_json_format(room):
             rus_to_lat = {
@@ -53,8 +54,17 @@ def build_path(start_room, end_room):
                 university_building = university_buildings[parts[0]]
                 return university_building
 
-        shortest_path = nx.shortest_path(G, source=start_room, target=end_room)
+        # ['Room_01', 'C_01', ... 'C_0_1_stairs', 'Stairs_0_1', 'Stairs_1_1', 'C_1_1_stairs', 'C_127', 'Room_127']
+        if start_room not in G.nodes:
+            return f"Начальный кабинет {start_room} указан неверно."
+        elif end_room not in G.nodes:
+            return f"Конечный кабинет {end_room} указан неверно."
+        else:
+            shortest_path = nx.shortest_path(G, source=start_room, target=end_room)
 
+        # Drawing the route line on the image. 'draw' is an object from the Pillow library used for drawing the route.
+        # 'segment' is a list of points in the corridor.
+        # coords_start This variable stores the coordinates of the points through which the line will pass.
         def draw_path_segment(draw, segment, color="green", width=5):
             for i in range(len(segment) - 1):
                 room_start = segment[i]
@@ -63,6 +73,7 @@ def build_path(start_room, end_room):
                 coords_end = G.nodes[room_end]['coords']
                 draw.line([coords_start, coords_end], fill=color, width=width)
 
+        # {'Floor_0': ['Room_01', 'C_01', 'C_02', 'C_03', 'C_23', 'C_27', 'C_0_1_stairs', 'Stairs_0_1'], 'Floor_1': ....
         segments = {}
         for key_point in shortest_path:
             room_data = G.nodes[key_point]
@@ -74,9 +85,11 @@ def build_path(start_room, end_room):
             else:
                 print(f"Can't determine the floor for room: {key_point}")
 
+        # paths to .png images
         generated_paths = []
 
         for floor, segment in segments.items():
+            # This variable stores the path to the image of the floor plan
             map_file = floor_maps.get(identify_the_building(start_room), {}).get(floor)
             if map_file:
                 img = Image.open(map_file)
@@ -84,11 +97,11 @@ def build_path(start_room, end_room):
                 draw_path_segment(draw, segment)
                 path_filename = f"result_{floor}.png"
                 img.save(path_filename)
-                # img.show()
+                img.show()
                 generated_paths.append(path_filename)
             else:
                 print(f"No map for floor: {floor}")
         return generated_paths
     except nx.exception.NodeNotFound:
         return 'Кажется одного из этих кабинетов нет, проверьте правильность'
-# build_path('р-001', 'р-127')
+# build_path('Roomqq-001', 'Room-127')

@@ -1347,14 +1347,14 @@
             },
             "C_370": {
                 "coords":[472, 1728],
-                "connections":["C_325","C_327","C_371"]
+                "connections":["C_325","C_327","C_371","C_323","C_322"]
             },
             "C_371": {
-                "coords":[472, 1728],
+                "coords":[472, 1819],
                 "connections":["Stairs_3_1","C_370"]
             },
             "Stairs_3_1": {
-                "coords":[472, 1728],
+                "coords":[517, 1819],
                 "connections":["C_371","Stairs_2_1","Stairs_1_1","Stairs_0_1","Stairs_4_1"]
             },
             "Room_327": {

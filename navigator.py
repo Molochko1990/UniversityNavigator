@@ -104,4 +104,4 @@ def build_path(start_room, end_room):
         return generated_paths
     except nx.exception.NodeNotFound:
         return 'Кажется одного из этих кабинетов нет, проверьте правильность'
-build_path('Room-322', 'Room-125')
+# build_path('Room-322', 'Room-125')

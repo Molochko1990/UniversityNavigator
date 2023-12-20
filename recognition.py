@@ -1,14 +1,29 @@
-import re
+def extract_route(s):
+    s = s.upper().split()
+    Blocks = ['И-', 'Э-', 'Р-', "ГУК-", "Т-", "ВХО","ВЫХОД"]
+    Result = []
+    for symbol in Blocks:
+        for i in s:
+            if i.count(symbol) == 1:
+                i = i.replace('А', "1")
+                i = i.replace('Б', "2")
+                if i.count("ВХО") == 1:
+                    Result.append("Р-0000")
+                elif i.count("ВЫХОД") == 1:
+                    Result.append("Р-0000")
+                else:
+                    Result.append(i)
+
+    print(Result)
+    return Result
 
 
-def extract_route(text):
-    text = text.replace('-', ' ')
-    pattern = r'([а-яА-Я]+\s*\d+)\s*в\s*([а-яА-Я]+\s*\d+)'
-    match = re.search(pattern, text)
+def fixer(i):
 
-    if match:
-        start = match.group(1).replace(' ', '-')
-        end = match.group(2).replace(' ', '-')
-        return f'{start} {end}'
-    else:
-        return None
+    i = i.upper()
+    i = i.replace('А', "1")
+    i = i.replace('Б', "2")
+    i = i.replace('ВХОД', "Р-0000")
+    i = i.replace('ВЫХОД', "Р-0000")
+    print(i)
+    return i

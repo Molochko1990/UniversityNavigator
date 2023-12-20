@@ -84,7 +84,7 @@ def build_path(start_room, end_room):
             draw_path_segment(draw, segment)
             path_filename = f"result_{floor}.png"
             img.save(path_filename)
-            img.show()
+            #img.show()
             generated_paths.append(path_filename)
         else:
             print(f"No map for floor: {floor}")

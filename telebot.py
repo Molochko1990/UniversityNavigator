@@ -1,6 +1,7 @@
 import asyncio
 import aiohttp
 from aiogram import *
+from aiogram import Dispatcher, Bot, types
 from aiogram.types import FSInputFile
 import navigator
 from aiogram.filters import Command
@@ -9,7 +10,6 @@ from states import Choice
 from vizual_photo import visual
 global start_room_g
 from recognition import extract_route, fixer
-
 
 TOKEN = '6418940022:AAGYidmVjFz8ovrFaDrfk8NrIFHeunra7k4'
 bot = Bot(token=TOKEN)
@@ -31,6 +31,11 @@ async def start(message: types.Message):
     )
     await message.answer("Привет!\nЯ- Интеллектуальный Бот-Навигатор \nТы можешь найти маршрут от одной"
                          " точки до другой!\nВыбери действие", reply_markup=keyboard)
+
+
+async def cmd_reply(message: types.Message):
+    await message.reply("Привет!\nЯ- Интеллектуальный Бот-Навигатор \nТы можешь найти маршрут от одной"
+                        " точки до другой!\nВведи мне 2 точки в таком формате: Маршрут из Р-123 в Р-544 или Р-123 в Р-544")
 
 
 @dp.message(F.text.lower() == "поиск по фото")
@@ -78,7 +83,7 @@ async def get_photo(message: types.Message, state: FSMContext):
     else:
         end_room = fixer(message.text)
         start_room_g = fixer(start_room_g)
-        #print(start_room_g, end_room)
+        # print(start_room_g, end_room)
         image_files = navigator.build_path(start_room_g, end_room)
         for image_path in image_files:
             photo = FSInputFile(image_path)

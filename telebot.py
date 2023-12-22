@@ -11,7 +11,7 @@ from vizual_photo import visual
 global start_room_g
 from recognition import extract_route, fixer
 
-TOKEN = '6418940022:AAGYidmVjFz8ovrFaDrfk8NrIFHeunra7k4'
+TOKEN = 'Your_token'
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
 
